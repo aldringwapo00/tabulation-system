@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/criteria_event.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7c52625b7b.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Event Tabulation</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="container">
+                <div class="side-navigation" id="sideNav">
+                    <div class="side-logo">
+                        <i class='bx bx-edit-alt logo-icon' id="logoIcon"></i>
+                        <span class="logo-name" id="logoName">ETabulation</span>
+                        <i class='bx bx-menu' id="btn_nav"></i>
+                    </div>
+                    <ul class="navigations">
+                        <li>
+                            <a href="../html/index.html">
+                                <i class='bx bx-grid-alt'></i>
+                                <span class="link-name" id="linkName">Dashboard</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">Dashboard</span>
+                        </li>
+                        <li>
+                            <a href="../html/judges.html">
+                                <i class="fa-solid fa-gavel"></i>
+                                <span class="link-name" id="linkName">judges</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">judges</span>
+                        </li>
+                        <li>
+                            <a href="#" id="dropdown_btn" class="active">
+                                <i class='bx bx-pie-chart-alt-2' ></i>
+                                <span class="link-name" id="linkName">criteria</span>
+                            </a>
+                            <div class="dropdown-content" id="dropdown_content">
+                                <ul>
+                                    <li>
+                                        <a href="criteria_event.html">
+                                            <i class='bx bx-box' ></i>
+                                            <span id="drop_link">event criteria</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="criteria_archive.html">
+                                            <i class='bx bx-pie-chart-alt-2' ></i>
+                                            <span id="drop_link">criteria archived</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                            <span class="toolTip" id="toolTip">criteria</span>
+                        </li>
+                        <li>
+                            <a href="../html/contestant.html" >
+                                <i class='bx bx-user'></i>
+                                <span class="link-name" id="linkName">contestants</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">contestants</span>
+                        </li>
+                        <li>
+                            <a href="../html/events.html">
+                                <i class='bx bx-calendar-event'></i>
+                                <span class="link-name" id="linkName">Events</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">events</span>
+                        </li>
+                        <li>
+                            <a href="../html/scores.html">
+                                <i class='bx bx-bar-chart-alt-2'></i>
+                                <span class="link-name" id="linkName">score</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">score</span>
+                        </li>
+                        <li>
+                            <a href="../html/settings.html">
+                                <i class='bx bx-cog'></i>
+                                <span class="link-name" id="linkName">settings</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">settings</span>
+                        </li>
+                        <li class="link-user">
+                            <a href="#">
+                                <i class='bx bx-log-out' ></i>
+                                <span class="link-name">logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-content" id="mainContent">
+                    <div class="header">
+                        <div class="header-title">
+                            <i class='bx bx-box' ></i>
+                            <span class="header-title">Criteria Event</span>
+                        </div>
+                        <div id="datetime">
+                            <span id="datetime-display"></span>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="event-container">
+                            <div class="button-section">
+                                <a href="#" class="add-btn" id="addButton">
+                                    <i class='bx bx-plus'></i>
+                                    <span>add</span>
+                                </a>
+                            </div>
+                            <div class="event-table-container">
+                                <div class="table-buttons">
+                                    <div class="button-search">
+                                        <input type="text" placeholder="search">                                  
+                                    </div>
+                                    <div class="input-field">
+                                        <div class="input-group">
+                                            <select name="" id="" >
+                                                <option value="" disabled selected>Select an option...</option>
+                                                <option value="">example</option>
+                                                <option value="">example</option>
+                                                <option value="">example</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="">Criteria ID: <span>0000</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                           <th>criteria name</th>
+                                           <th>score</th>
+                                           <th class="action">action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>dance</td>
+                                            <td>score</td>
+                                            <td class="action-td">
+                                                <button class="btn-update">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                    <span>update</span>
+                                                </button>
+                                                <button class="btn-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                    <span>delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="event-form-container" id="eventForm">
+                                <i class="fa fa-x" id="closeButton"></i>
+                                <h1 class="form-title">Constestant information</h1>
+                                <div class="form-content">
+                                    <div class="form-groups">
+                                        <select name="" id="" >
+                                            <option value="" disabled selected>Select an option...</option>
+                                            <option value="">example</option>
+                                            <option value="">example</option>
+                                            <option value="">example</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-groups">
+                                        <div class="form-group">
+                                            <label for="">criteria iD</label>
+                                            <input type="text" placeholder="criteria id">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">criteria name</label>
+                                            <input type="text" placeholder="criteria name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">originality</label>
+                                            <input type="text" placeholder="originality">
+                                        </div>
+                                    </div>                
+                                    <div class="form-groups">
+                                        <div class="form-group">
+                                            <label for="">concept</label>
+                                            <input type="text" placeholder="concept">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">clarity</label>
+                                            <input type="text" placeholder="clarity">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">meaning</label>
+                                            <input type="text" placeholder="meaning">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">impact</label>
+                                            <input type="text" placeholder="audience impact">
+                                        </div>              
+                                    </div>
+                                    <div class="form-button">
+                                        <button class="btn-add">Submit</button>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overlay" id="overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/nav.js"></script>
+    <script src="../js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/contestant.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7c52625b7b.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Event Tabulation</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="container">
+                <div class="side-navigation" id="sideNav">
+                    <div class="side-logo">
+                        <i class='bx bx-edit-alt logo-icon' id="logoIcon"></i>
+                        <span class="logo-name" id="logoName">ETabulation</span>
+                        <i class='bx bx-menu' id="btn_nav"></i>
+                    </div>
+                    <ul class="navigations">
+                        <li>
+                            <a href="../html/index.html">
+                                <i class='bx bx-grid-alt'></i>
+                                <span class="link-name" id="linkName">Dashboard</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">Dashboard</span>
+                        </li>
+                        <li>
+                            <a href="../html/judges.html">
+                                <i class="fa-solid fa-gavel"></i>
+                                <span class="link-name" id="linkName">judges</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">judges</span>
+                        </li>
+                        <li>
+                            <a href="#" id="dropdown_btn">
+                                <i class='bx bx-pie-chart-alt-2' ></i>
+                                <span class="link-name" id="linkName">criteria</span>
+                            </a>
+                            <div class="dropdown-content" id="dropdown_content">
+                                <ul>
+                                    <li>
+                                        <a href="criteria_event.html">
+                                            <i class='bx bx-box' ></i>
+                                            <span id="drop_link">event criteria</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="criteria_archive.html">
+                                            <i class='bx bx-pie-chart-alt-2' ></i>
+                                            <span id="drop_link">criteria archived</span>
+                                        </a>
+                                    </li>                                  
+                                </ul>
+                            </div>
+                            <span class="toolTip" id="toolTip">criteria</span>
+                        </li>
+                        <li>
+                            <a href="../html/contestant.html" class="active">
+                                <i class='bx bx-user'></i>
+                                <span class="link-name" id="linkName">contestants</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">contestants</span>
+                        </li>
+                        <li>
+                            <a href="../html/events.html">
+                                <i class='bx bx-calendar-event'></i>
+                                <span class="link-name" id="linkName">Events</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">events</span>
+                        </li>
+                        <li>
+                            <a href="../html/scores.html">
+                                <i class='bx bx-bar-chart-alt-2'></i>
+                                <span class="link-name" id="linkName">score</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">score</span>
+                        </li>
+                        <li>
+                            <a href="../html/settings.html">
+                                <i class='bx bx-cog'></i>
+                                <span class="link-name" id="linkName">settings</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">settings</span>
+                        </li>
+                        <li class="link-user">
+                            <a href="#">
+                                <i class='bx bx-log-out' ></i>
+                                <span class="link-name">logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-content" id="mainContent">
+                    <div class="header">
+                        <div class="header-title">
+                            <i class='bx bx-user'></i>
+                            <span class="header-title">Constestant</span>
+                        </div>
+                        <div id="datetime">
+                            <span id="datetime-display"></span>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="event-container">
+                            <div class="button-section">
+                                <a href="#" class="add-btn" id="addButton">
+                                    <i class='bx bx-plus'></i>
+                                    <span>add</span>
+                                </a>
+                            </div>
+                            <div class="event-table-container">
+                                <div class="button-search">
+                                    <input type="text" placeholder="search">
+                                   
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th class="age">Name</th>
+                                            <th class="age">age</th>
+                                            <th class="gender">gender</th>
+                                            <th class="course">course</th>
+                                            <th class="grade">grade</th>
+                                            <th class="action">action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>john doe</td>
+                                            <td>23</td>
+                                            <td>cybertron</td>
+                                            <td class="course-value">bsit</td>
+                                            <td>first</td>
+                                            <td class="action-td">
+                                                <button class="btn-update">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                    <span>update</span>
+                                                </button>
+                                                <button class="btn-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                    <span>delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>nigga kun</td>
+                                            <td>26</td>
+                                            <td>bicycle</td>
+                                            <td class="course-value">bsit</td>
+                                            <td>second</td>
+                                            <td class="action-td">
+                                                <button class="btn-update">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                    <span>update</span>
+                                                </button>
+                                                <button class="btn-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                    <span>delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Zoey</td>
+                                            <td>23</td>
+                                            <td>female</td>
+                                            <td class="course-value">bsit</td>
+                                            <td>third</td>
+                                            <td class="action-td">
+                                                <button class="btn-update">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                    <span>update</span>
+                                                </button>
+                                                <button class="btn-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                    <span>delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="event-form-container" id="eventForm">
+                                <i class="fa fa-x" id="closeButton"></i>
+                                <h1 class="form-title">Constestant information</h1>
+                                <div class="form-content">
+                                    <div class="form-groups">
+                                        <div class="form-group">
+                                            <label for="">Event Type</label>
+                                            <select name="" id="">
+                                                <option value="">Example</option>
+                                                <option value="">Example</option>
+                                                <option value="">Example</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">name</label>
+                                            <input type="text" placeholder="Full Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">age</label>
+                                            <input type="number" placeholder="Age" min="1">
+                                        </div>
+                                    </div>                
+                                    <div class="form-groups">
+                                        <div class="form-group">
+                                            <label for="">Gender</label>
+                                            <input type="text" placeholder="Gender">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">course</label>
+                                            <input type="text" placeholder="Course">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Grade</label>
+                                            <input type="text" placeholder="grade">
+                                        </div>              
+                                    </div>
+                                    <div class="form-button">
+                                        <button class="btn-add">Submit</button>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overlay" id="overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/nav.js"></script>
+    <script src="../js/form.js"></script>
+</body>
+
+</html>

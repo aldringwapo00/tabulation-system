@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7c52625b7b.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Event Tabulation</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="container">
+                <div class="side-navigation" id="sideNav">
+                    <div class="side-logo">
+                        <i class='bx bx-edit-alt logo-icon' id="logoIcon"></i>
+                        <span class="logo-name" id="logoName">ETabulation</span>
+                        <i class='bx bx-menu' id="btn_nav" ></i>
+                    </div>
+                    <ul class="navigations">
+                        <li>
+                            <a href="../html/index.html" class="active">
+                                <i class='bx bx-grid-alt'></i>
+                                <span class="link-name" id="linkName">Dashboard</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">Dashboard</span>
+                        </li>
+                        <li>
+                            <a href="../html/judges.html">
+                                <i class="fa-solid fa-gavel"></i>
+                                <span class="link-name" id="linkName">judges</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">judges</span>
+                        </li>
+                        <li>
+                            <a href="#" id="dropdown_btn">
+                                <i class='bx bx-pie-chart-alt-2' ></i>
+                                <span class="link-name" id="linkName">criteria</span>
+                            </a>
+                            <div class="dropdown-content" id="dropdown_content">
+                                <ul>
+                                    <li>
+                                        <a href="criteria_event.html">
+                                            <i class='bx bx-box' ></i>
+                                            <span id="drop_link">event criteria</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="criteria_archive.html">
+                                            <i class='bx bx-pie-chart-alt-2' ></i>
+                                            <span id="drop_link">criteria archived</span>
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                            <span class="toolTip" id="toolTip">criteria</span>
+                        </li>
+                        <li>
+                            <a href="../html/contestant.html">
+                                <i class='bx bx-user'></i>
+                                <span class="link-name" id="linkName">contestants</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">contestants</span>
+                        </li>
+                        <li>
+                            <a href="../html/events.html">
+                                <i class='bx bx-calendar-event' ></i>
+                                <span class="link-name" id="linkName">Events</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">events</span>
+                        </li>
+                        <li>
+                            <a href="../html/scores.html">
+                                <i class='bx bx-bar-chart-alt-2' ></i>
+                                <span class="link-name" id="linkName">score</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">score</span>
+                        </li>
+                        <li>
+                            <a href="../html/settings.html">
+                                <i class='bx bx-cog' ></i>
+                                <span class="link-name" id="linkName">settings</span>
+                            </a>
+                            <span class="toolTip" id="toolTip">settings</span>
+                        </li>
+                        <li class="link-user">
+                            <a href="#">
+                                <i class='bx bx-log-out' ></i>
+                                <span class="link-name">logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-content" id="mainContent">
+                    <div class="header">
+                        <div class="header-title">
+                            <i class='bx bx-calendar-event'></i>
+                            <span class="header-title">Dashboard</span>
+                        </div>
+                        <div id="datetime">
+                            <span id="datetime-display"></span>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="card-container">
+                            <div class="card">
+                                <i class='bx bx-calendar-event' ></i>
+                                <div class="card-content">
+                                    <h3 class="card-title">Events</h3>
+                                    <h1 class="card-subtitle">69</h1>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <i class='bx bx-user'></i>
+                                <div class="card-content">
+                                    <h3 class="card-title">Contestant</h3>
+                                    <h1 class="card-subtitle">69</h1>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <i class="fa-solid fa-gavel"></i>
+                                <div class="card-content">
+                                    <h3 class="card-title">Judges</h3>
+                                    <h1 class="card-subtitle">69</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../js/nav.js"></script>
+</body>
+
+
+
+<script>
+const btnNav = document.getElementById('btn_nav');
+const sideNav = document.getElementById('sideNav');
+const mainContent = document.getElementById('mainContent');
+const logoName = document.getElementById('logoName');
+const logoIcon = document.getElementById('logoIcon');
+const linkNames = document.querySelectorAll('.link-name');
+const toolTip = document.getElementById('toolTip');
+
+
+let isNavOpen = false;
+
+btnNav.addEventListener('click', () => {
+    if (isNavOpen) {
+        sideNav.style.width = '250px';
+        mainContent.style.left = '250px';
+        logoIcon.style.opacity = '1';
+        logoName.style.opacity = '1';
+        linkNames.forEach(linkName => {
+            linkName.style.opacity = '1';
+        });
+    } 
+    else {
+        sideNav.style.width = '70px';
+        mainContent.style.left = '70px';
+        logoIcon.style.opacity = '0';
+        logoName.style.opacity = '0';
+        linkNames.forEach(linkName => {
+            linkName.style.opacity = '0';
+        });
+    }
+    isNavOpen = !isNavOpen;
+   
+});
+
+// btnNav.addEventListener('click', () => {
+
+// if (sideNav.style.width === '70px') {
+//         toolTip.style.opacity = '1';
+//         toolTip.style.display = 'none';
+//     }
+
+// else if (sideNav.style.width === '250px') {
+//         toolTip.style.opacity = '0';
+//         toolTip.style.display = 'none';
+//     }        
+
+// });
+</script>
+</html>
